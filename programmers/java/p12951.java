@@ -1,3 +1,5 @@
+package programmers.java;
+
 import java.util.Arrays;
 import java.util.Locale;
 
@@ -10,15 +12,16 @@ import java.util.Locale;
 public class p12951 {
     public static void main(String[] args) {
         String s = "for      the last week  ";
-//        String s = "   ";
+        // String s = " ";
         System.out.println(solution(s));
     }
+
     // 한 글자씩
     public static String solution(String s) {
-        String answer="";
+        String answer = "";
 
         String[] sArr = s.toLowerCase().split("");
-//        System.out.println(Arrays.toString(sArr));
+        // System.out.println(Arrays.toString(sArr));
         boolean isFirst = true;
         for (String ss : sArr) {
             if (ss.equals(" ")) {
@@ -38,21 +41,22 @@ public class p12951 {
         return answer;
     }
 
-//    public static String solution(String s) {
-//        String answer = "";
-//
-//        String[] sArr = s.toLowerCase().split("\\s");
-////        System.out.println(Arrays.toString(sArr)); // [for, , , , , , the, last, week] 이렇게됨. 주어진 문자열 week 뒤에 공백이 두개 존재!
-//        for (int i = 0; i < sArr.length; i++) {
-//            if (sArr[i].equals("")) {
-//                answer += " ";
-//                continue;
-//            }
-//            answer += sArr[i].substring(0,1).toUpperCase() + sArr[i].substring(1) + ((i == (sArr.length -1)) ? "" : " ");
-//        }
-//
-//        return answer;
-//    }
-
+    // public static String solution(String s) {
+    // String answer = "";
+    //
+    // String[] sArr = s.toLowerCase().split("\\s");
+    //// System.out.println(Arrays.toString(sArr)); // [for, , , , , , the, last,
+    // week] 이렇게됨. 주어진 문자열 week 뒤에 공백이 두개 존재!
+    // for (int i = 0; i < sArr.length; i++) {
+    // if (sArr[i].equals("")) {
+    // answer += " ";
+    // continue;
+    // }
+    // answer += sArr[i].substring(0,1).toUpperCase() + sArr[i].substring(1) + ((i
+    // == (sArr.length -1)) ? "" : " ");
+    // }
+    //
+    // return answer;
+    // }
 
 }
